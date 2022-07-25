@@ -89,7 +89,7 @@ const trackTicker = (name, socket) => {
   socket.on("disconnect", () => {
     clearInterval(timer);
   });
-  socket.on("ticker:stop", ({ nameToStop }) => {
+  socket.on("ticker:stop", ({ name: nameToStop }) => {
     if (nameToStop === name) {
       clearInterval(timer);
     }

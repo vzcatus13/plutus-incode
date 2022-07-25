@@ -23,8 +23,16 @@ const Ticker = ({ name }: { name: string }) => {
     };
   }, [name, socket]);
 
+  const handleDisable = (isDisabled: boolean) => {
+    if (isDisabled) {
+      socket.emit('ticker:stop', { name });
+    } else {
+      socket.emit('ticker:start', { name });
+    }
+  };
+
   if (ticker !== null && error == null) {
-    return <TickerRow ticker={ticker} />;
+    return <TickerRow ticker={ticker} onDisable={handleDisable} />;
   }
 
   return null;

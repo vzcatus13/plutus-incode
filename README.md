@@ -16,7 +16,7 @@ Requirements:
 As a bonus you can implement (please describe implemented bonus functionality in this file):
 
 - any additional visual effects to highlight positive or negative changes in the prices
-- the possibility to switch on/off tickers by user
+- the possibility to switch on/off tickers by user (✅)
 - the possibility to specify interval time by user
 - the possibility to add/remove ticker from watching group
 - any additional functionality you consider useful
